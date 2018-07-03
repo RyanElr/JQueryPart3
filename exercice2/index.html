@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercice 2</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <button type="button" name="button" id="button1">+</button>
+    <button type="button" name="button" id="button2">-</button>
+    <input type="text" id="text"></input>
+  </body>
+  <script>
+  var compteur = 0;
+  $('#button1').click(function() {
+    compteur++;
+    $('#text').val(compteur);
+  });
+  $('#button2').click(function() {
+    compteur--;
+    $('#text').val(compteur);
+  });
+  </script>
+</html>

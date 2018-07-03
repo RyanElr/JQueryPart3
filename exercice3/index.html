@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercice 3</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <button type="button" name="button" id="check">Check</button>
+    <input type="text" id="value"></input>
+    <p></p>
+  </body>
+  <script>
+    var rand = Math.trunc(Math.random() * 100)+1;
+    var tryNum = 0;
+    var reg = /^[\d\/]+$/;
+    $('#check').click(function() {
+      var value = $('#value').val();
+      tryNum++;
+      if(reg.test(value) && reg.test(rand))
+    {
+      if(value == rand) {
+        $('p').text('Nice !' );
+      } else if(value < rand) {
+        $('p').text('More');
+      } else {
+        $('p').text('Less');
+      }
+    }else {
+      alert('Please enter a valid number')
+    }
+  }
+  );
+  </script>
+</html>
